@@ -1,0 +1,53 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Test Results
+TestResults/
+
+# Publish Output
+publish/
+artifacts/
+
+# Logs
+*.log
+
+# NuGet
+packages/
+*.nupkg
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# EF Core
+*.dbmdl
+
+# SQL LocalDB
+*.mdf
+*.ldf
+
+# Environment Files
+.env
+.env.*
+
+# User Secrets
+secrets.json
+
+# App Settings (only if they contain secrets)
+appsettings.Development.json
+
+# IIS Express
+iisexpress/
