@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Nexvara_ERP.Application.DTOs.Sales
+{
+    public class AddLeadSourcesDto
+    {
+        [Required(ErrorMessage ="Lead Name is Required")]
+        public string Name { get; set; }
+        [Required(ErrorMessage = "Lead Description is Required")]
+        public string Description { get; set; }
+    }
+}

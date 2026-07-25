@@ -20,4 +20,37 @@ namespace Nexvara_ERP.Core
         [Description("Sales")]
         Sales =2,
     }
+
+    public enum EntityStatusType
+    {
+        [Description("All")]
+        All = 0,
+
+        [Description("Active")]
+        Active = 1,
+
+        [Description("InActive")]
+        InActive = 2,
+
+    }
+    public enum ResponseCodes
+    {
+        [Description("Error")]
+        Error = 0,
+        [Description("Success")]
+        Success = 200,
+        [Description("Duplicate")]
+        Duplicate = 300,
+        [Description("Invalid Model")]
+        InvalidModel = 303,
+        [Description("Invalid User")]
+        Unauthorized = 401,
+        [Description("Not Found")]
+        NotFound = 404,
+        [Description("BadRequest")]
+        BadRequest = 400,
+        [Description("Error code")]
+        ErrorCode = 400,
+
+    }
 }

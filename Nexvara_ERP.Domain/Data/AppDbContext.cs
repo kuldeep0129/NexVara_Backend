@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Nexvara_ERP.Domain.Entity;
 using Nexvara_ERP.Domain.Identiy;
 
 namespace Nexvara_ERP.Domain.Data
@@ -10,6 +11,8 @@ namespace Nexvara_ERP.Domain.Data
             : base(options)
         {
         }
+
+        public DbSet<LeadSources> LeadSources { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
