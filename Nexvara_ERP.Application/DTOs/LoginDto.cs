@@ -10,5 +10,6 @@ namespace Nexvara_ERP.Application.DTOs
     {
         public string Email { get; set; }
         public string Password { get; set; }
+        
     }
 }

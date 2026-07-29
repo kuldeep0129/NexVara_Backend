@@ -13,6 +13,7 @@ namespace Nexvara_ERP.Domain.Data
         }
 
         public DbSet<LeadSources> LeadSources { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
