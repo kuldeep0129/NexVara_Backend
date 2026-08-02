@@ -29,7 +29,8 @@ builder.Services.AddScoped<IUnitofWork, UnitofWork>();
 builder.Services.AddScoped<ILoginServices, LoginServices>();
 builder.Services.AddScoped<ICompaniesRepositry, companiesRepositry>();
 builder.Services.AddScoped<ICompaninesServices, CompaniesServices>();
-
+builder.Services.AddScoped<IDepartmentRepositry,DepartmentRepositry>();
+builder.Services.AddScoped<IDepartmentServices,DepartmentServices>();
 #endregion
 
 #region SwaggerConfiguration
