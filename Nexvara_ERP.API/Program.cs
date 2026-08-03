@@ -82,6 +82,20 @@ builder.Services
 .AddDefaultTokenProviders();
 #endregion
 
+#region CORS Configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
+#endregion
+
 #region JWT Configuration 
 builder.Services
 .AddAuthentication(options =>
@@ -131,7 +145,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 app.UseAuthentication();
 
 app.UseAuthorization();

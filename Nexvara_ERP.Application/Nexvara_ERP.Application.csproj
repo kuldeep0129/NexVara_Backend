@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\Sales\UpdateDto\" />
     <Folder Include="Mapping\" />
   </ItemGroup>
 
