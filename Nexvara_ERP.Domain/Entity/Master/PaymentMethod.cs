@@ -6,14 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nexvara_ERP.Domain.Entity
+namespace Nexvara_ERP.Domain.Entity.Master
 {
-    public class LeadSources : BaseDbModel
+    public class PaymentMethod : BaseDbModel
     {
         [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         public string? Description { get; set; }
+        
     }
 }

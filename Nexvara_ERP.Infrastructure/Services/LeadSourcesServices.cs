@@ -89,7 +89,7 @@ namespace Nexvara_ERP.Infrastructure.Services
                     response.StatusCodes = (int)ResponseCodes.BadRequest;
                     return response;
                 }
-                var data = new LeadSources
+                var data = new Nexvara_ERP.Domain.Entity.Master.LeadSources
                 {
                     Name = dto.Name,
                     Description = dto.Description,

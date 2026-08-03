@@ -1,6 +1,6 @@
 ﻿using Nexvara_ERP.Application.DTOs.Common;
 using Nexvara_ERP.Application.DTOs.Sales;
-using Nexvara_ERP.Domain.Entity;
+using Nexvara_ERP.Domain.Entity.Master;
 using System;
 using System.Collections.Generic;
 using System.Linq;

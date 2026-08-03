@@ -3,7 +3,7 @@ using Nexvara_ERP.Application.DTOs.Common;
 using Nexvara_ERP.Application.Interface.IRepository;
 using Nexvara_ERP.Core;
 using Nexvara_ERP.Domain.Data;
-using Nexvara_ERP.Domain.Entity;
+using Nexvara_ERP.Domain.Entity.Master;
 
 namespace Nexvara_ERP.Infrastructure.Repository
 {
