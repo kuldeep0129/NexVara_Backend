@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Nexvara_ERP.Domain.Entity.Master
 {
-    public class LeadSources : BaseDbModel
+    public class 
+        LeadSources : BaseDbModel
     {
         [Key]
         public int Id { get; set; }

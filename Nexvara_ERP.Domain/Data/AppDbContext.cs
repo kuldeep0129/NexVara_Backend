@@ -15,6 +15,7 @@ namespace Nexvara_ERP.Domain.Data
         }
 
         public DbSet<LeadSources> LeadSources { get; set; }
+
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeBankDetails> EmployeeBankDetail { get; set; }
@@ -58,6 +59,7 @@ namespace Nexvara_ERP.Domain.Data
         public DbSet<SalesOrderItem> SalesOrderItem { get; set; }
         public DbSet<Services> Services { get; set; }
         
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
