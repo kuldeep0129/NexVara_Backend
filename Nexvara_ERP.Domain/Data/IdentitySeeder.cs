@@ -20,7 +20,7 @@ namespace Nexvara_ERP.Domain.Data
         }
         private static async Task SeedRoles(RoleManager<ApplicationRole> roleManager)
         {
-            string[] roles = { Roles.SuperAdmin.ToString(), Roles.Admin.ToString() ,Roles.Sales.ToString()};
+            string[] roles = { Roles.SuperAdmin.ToString(), Roles.Admin.ToString() ,Roles.Sales.ToString(),Roles.ITAdmin.ToString(),Roles.HRAdmin.ToString(),Roles.FinanceAdmin.ToString()};
 
             foreach (var role in roles)
             {

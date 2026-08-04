@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Nexvara_ERP.Application.DTOs.Sales.GetDto
 {
-    internal class GetLeadStatus
+    public class GetLeadStatus
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public bool IsFinal { get; set; }
+        public bool IsActive { get; set; }
     }
 }

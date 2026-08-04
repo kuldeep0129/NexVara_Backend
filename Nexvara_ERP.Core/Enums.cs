@@ -17,8 +17,14 @@ namespace Nexvara_ERP.Core
         SuperAdmin =0,
         [Description("Admin")]
         Admin =1,
-        [Description("Sales")]
+        [Description("SalesAdmin")]
         Sales =2,
+        [Description("HRAdmin")]
+        HRAdmin = 3,
+        [Description("FinanceAdmin")]
+        FinanceAdmin = 4,
+        [Description("ITAdmin")]
+        ITAdmin = 5,
     }
 
     public enum EntityStatusType
@@ -51,6 +57,31 @@ namespace Nexvara_ERP.Core
         BadRequest = 400,
         [Description("Error code")]
         ErrorCode = 400,
+
+    }
+
+    public enum CreateStatus
+    {
+        [Description("Pending")]
+        Pending = 0,
+
+        [Description("Approve")]
+        Approve = 1,
+
+        [Description("Rejected")]
+        Rejected = 2,
+
+    }
+    public enum UpdateStatus
+    {
+        [Description("Pending")]
+        Pending = 0,
+
+        [Description("Approve")]
+        Approve = 1,
+
+        [Description("Rejected")]
+        Rejected = 2,
 
     }
 }

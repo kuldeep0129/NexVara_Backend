@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Nexvara_ERP.Application.DTOs.Sales.UpdateDto
 {
-    internal class UpdateLeadStatus
+    public class UpdateLeadStatus
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }
