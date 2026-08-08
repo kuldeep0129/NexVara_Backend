@@ -10,5 +10,6 @@ namespace Nexvara_ERP.Application.DTOs
     public class LoginResponseDto : BaseResponse
     {
         public  string? Data { get; set; }
+        public string? Role { get; set; }
     }
 }
