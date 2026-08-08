@@ -5,7 +5,7 @@ using Nexvara_ERP.Domain.Data;
 using Nexvara_ERP.Domain.Entity.Master;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;

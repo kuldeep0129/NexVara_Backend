@@ -10,5 +10,6 @@ namespace Nexvara_ERP.Application.DTOs.Common
     public class RequestStatusResponse : PaginationDto
     {
         public EntityStatusType status { get; set; } = EntityStatusType.All;
+        public int? Id { get; set; }
     }
 }

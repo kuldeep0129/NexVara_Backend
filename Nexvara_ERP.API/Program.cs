@@ -27,6 +27,8 @@ builder.Services.AddScoped<ILeadSourcesRepository, LeadSourcesRepository>();
 builder.Services.AddScoped<ILeadSourcesServices, LeadSourcesServices>();
 builder.Services.AddScoped<IUnitofWork, UnitofWork>();
 builder.Services.AddScoped<ILoginServices, LoginServices>();
+builder.Services.AddScoped<IMasterRepository, MasterRepository>();
+builder.Services.AddScoped<IMasterServices, MasterServices>();
 
 #endregion
 
