@@ -15,6 +15,8 @@ namespace Nexvara_ERP.Domain.Data
         }
 
         public DbSet<LeadSources> LeadSources { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
         public DbSet<DocumentType> DocumentTypes { get; set; }
         public DbSet<Employee> Employees { get; set; }
