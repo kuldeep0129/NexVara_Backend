@@ -55,9 +55,11 @@ namespace Nexvara_ERP.Infrastructure.Services
                 response.Data = null;
                 return response;
             }
+            var userRole = roles.FirstOrDefault();
             response.Message = SystemMessage.LoginSuccess;
             response.StatusCodes = (int)ResponseCodes.Success;
             response.Data = token;
+            response.Role =userRole;
             return response;
         }
 

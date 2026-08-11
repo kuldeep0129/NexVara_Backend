@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Nexvara_ERP.Core\Nexvara_ERP.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

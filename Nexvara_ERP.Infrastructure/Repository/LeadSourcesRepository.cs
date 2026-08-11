@@ -3,7 +3,7 @@ using Nexvara_ERP.Application.DTOs.Common;
 using Nexvara_ERP.Application.Interface.IRepository;
 using Nexvara_ERP.Core;
 using Nexvara_ERP.Domain.Data;
-using Nexvara_ERP.Domain.Entity;
+using Nexvara_ERP.Domain.Entity.Master;
 
 namespace Nexvara_ERP.Infrastructure.Repository
 {
@@ -18,6 +18,11 @@ namespace Nexvara_ERP.Infrastructure.Repository
         public async Task<LeadSources?> GetByIdLeadSourcesAsync(int id)
         {
             return await _context.LeadSources.FirstOrDefaultAsync(x => x.Id == id && x.IsActive == true);
+        }
+
+        public async Task<LeadStatus?> GetByIdLeadStatusAsync(int id)
+        {
+            return await _context.LeadStatus.FirstOrDefaultAsync(x => x.Id == id && x.IsActive == true);
         }
 
         public async Task<PaginationResponseDto<LeadSources>> GetListLeadSourcesAsync(RequestStatusResponse response)
@@ -51,14 +56,56 @@ namespace Nexvara_ERP.Infrastructure.Repository
             };
         }
 
+        public async Task<PaginationResponseDto<LeadStatus>> GetListLeadStatusAsync(RequestStatusResponse response)
+        {
+
+            IQueryable<LeadStatus> query = _context.LeadStatus.AsNoTracking();
+
+            switch (response.status)
+            {
+                case EntityStatusType.Active:
+                    query = query.Where(x => x.IsActive);
+                    break;
+
+                case EntityStatusType.InActive:
+                    query = query.Where(x => !x.IsActive);
+                    break;
+
+                case EntityStatusType.All:
+                default:
+                    break;
+            }
+            int totalCount = await query.CountAsync();
+            List<LeadStatus> data = await query.OrderByDescending(x => x.CreateAt).Skip((response.PageNumber - 1) * response.PageSize)
+                .Take(response.PageSize).ToListAsync();
+            return new PaginationResponseDto<LeadStatus>
+            {
+                Data = data,
+                PageNumber = response.PageNumber,
+                PageSize = response.PageSize,
+                TotalRecords = totalCount,
+                TotalPages = (int)Math.Ceiling(totalCount / (double)response.PageSize)
+            };
+        }
+
         public async Task SaveAsync(LeadSources source)
         {
             await _context.LeadSources.AddAsync(source);
         }
 
+        public async Task SaveLeadStatusAsync(LeadStatus source)
+        {
+            await _context.LeadStatus.AddAsync(source);
+        }
+
         public async Task<LeadSources?> UpdateAsync(int id)
         {
             return await _context.LeadSources.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<LeadStatus?> UpdateLeadStatusAsync(int id)
+        {
+            return await _context.LeadStatus.FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 }
