@@ -29,6 +29,8 @@ builder.Services.AddScoped<IUnitofWork, UnitofWork>();
 builder.Services.AddScoped<ILoginServices, LoginServices>();
 builder.Services.AddScoped<IMasterRepository, MasterRepository>();
 builder.Services.AddScoped<IMasterServices, MasterServices>();
+builder.Services.AddScoped<IPaymentMethod, PaymentMethodRepository>();
+builder.Services.AddScoped<IPaymentMethodServices, PaymentMethodServices>();
 
 #endregion
 

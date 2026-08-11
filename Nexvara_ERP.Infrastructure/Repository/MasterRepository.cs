@@ -312,5 +312,6 @@ namespace Nexvara_ERP.Infrastructure.Repository
         {
             return await _context.State.FirstOrDefaultAsync(x => x.Id == id);
         }
+       
     }
 }
